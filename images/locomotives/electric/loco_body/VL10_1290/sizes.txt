@@ -23,3 +23,21 @@
 * door:
 	CSS: 
 	transform: scale (-1, 1);
+
+* couple-hitch:
+	X 3
+	Y 2
+	W 30
+	H 12
+
+* brake-main-hose:
+	X 3
+	Y 0
+	W 11
+	H 19
+
+* bus-type-shunt:
+	X 2
+	Y 6
+	W 12
+	H 10
