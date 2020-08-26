@@ -1,0 +1,25 @@
+
+* bogie_1:
+	X 0
+	Y 5
+	W 138
+	H 22
+
+* body_1:
+	start_size: 450x151
+	X 7
+	Y 5 
+	W 430
+	H 145
+	end_size: 430x145
+
+* body_2:
+	X 7	
+	Y 33
+	W 430
+	H 145
+	end-size: 430x145
+
+* door:
+	CSS: 
+	transform: scale (-1, 1);
