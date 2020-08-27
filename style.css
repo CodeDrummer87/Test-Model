@@ -2,4 +2,174 @@ html, body {
 	background-color: #ADD8E6;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+}
+
+* {
+	position: fixed;
+}
+
+.VL10 {
+	top: 220px;
+	left: 400px;
+}
+
+.el_wheels {
+	margin-top: 114px;
+}
+
+#el_wheel_1 {
+	margin-left: 57px;
+}
+
+#el_wheel_2 {
+	margin-left: 124px;
+}
+
+#el_wheel_3 {
+	margin-left: 267px;
+}
+
+#el_wheel_4 {
+	margin-left: 334px;
+}
+
+#el_wheel_5 {
+	margin-left: 494px;
+}
+
+#el_wheel_6 {
+	margin-left: 561px;
+}
+
+#el_wheel_7 {
+	margin-left: 701px;
+}
+
+#el_wheel_8 {
+	margin-left: 768px;
+}
+
+.bogie {
+	margin-top: 119px;
+}
+
+#bogie_1 {
+	margin-left: 35px;	
+}
+
+#bogie_2 {
+	margin-left: 245px;	
+}
+
+#bogie_3 {
+	transform: scale(-1, 1);
+	margin-left: 473px;	
+}
+
+#bogie_4 {
+	transform: scale(-1, 1);
+	margin-left: 680px;	
+}
+
+.couple-hitch {
+	margin-top: 107px;
+}
+
+#couple-hitch_1 {
+	margin-left: -18px;
+}
+
+#couple-hitch_2 {
+	margin-left: 402px;
+}
+
+#couple-hitch_3 {
+	margin-left: 419px;
+}
+
+#couple-hitch_4 {
+	margin-left: 838px;
+}
+
+
+#brake-main-hose {
+	margin-top: 117px;
+	margin-left: -3px;
+}
+
+#feedair-main-hose {
+	margin-top: 117px;
+	margin-left: 845px;
+}
+
+
+#body_2 {
+	margin-top: 2px;
+	margin-left: 427px;
+}
+
+#door_1 {
+	margin-left: 63px;
+	margin-top: 35px;
+}
+
+#door_2 {
+	transform: scale(-1, 1);
+	margin-left: 769px;
+	margin-top: 35px;
+}
+
+.bogie {
+	margin-top: 119px;
+}
+
+#bogie_1 {
+	margin-left: 35px;	
+}
+
+#bogie_2 {
+	margin-left: 245px;	
+}
+
+#bogie_3 {
+	transform: scale(-1, 1);
+	margin-left: 473px;	
+}
+
+#bogie_4 {
+	transform: scale(-1, 1);
+	margin-left: 680px;	
+}
+
+.pantograph {
+	margin-top: -53px;
+}
+
+#pant_1 {
+	margin-left: 80px;
+}
+
+#pant_2 {
+	margin-left: 695px;
+}
+
+#bus-type-shunt {
+	margin-left: 421px;
+	margin-top: 7px;
+}
+
+#pantograph-air-main {
+	margin-left: 412px;
+	margin-top: 31px;
+}
+
+#brake-line {
+	margin-left: 413px;
+	margin-top: 91px;
+}
+
+
+#railway {
+	margin-top: 361px;
 }
