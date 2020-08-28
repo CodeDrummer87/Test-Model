@@ -169,6 +169,9 @@ html, body {
 	margin-top: 91px;
 }
 
+.infrastructure{
+	z-index: -1;
+}
 
 #railway {
 	margin-top: 361px;
@@ -177,4 +180,8 @@ html, body {
 #contact_line {
 	margin-left: -510px;
 	margin-top: 76px;
+}
+
+.door {
+	cursor: pointer;
 }
