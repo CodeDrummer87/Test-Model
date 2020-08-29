@@ -169,6 +169,7 @@ html, body {
 	margin-top: 91px;
 }
 
+/* Infrastructure */
 .infrastructure{
 	z-index: -1;
 }
@@ -184,4 +185,22 @@ html, body {
 
 .door {
 	cursor: pointer;
+}
+
+/* Instruments */
+.instruments {
+	display: none;
+	margin-top: 400px;
+}
+
+#kVoltmeter {
+	margin-left: 450px;
+}
+
+#armature {
+	margin-left: 650px;
+}
+
+#excitation {
+	margin-left: 850px;
 }

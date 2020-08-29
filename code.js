@@ -3,9 +3,7 @@ let music = new Audio('music/main_theme.mp3');
 $(document).ready(function() {
 	$('.VL10').on('click', '#door_2', function() {
 		OpenTheDoor("#door_2");
-
 	}).on('click', '#door_1', function() {
-		$(this).remove();
 		OpenTheDoor("#door_1");
 	});
 });
@@ -24,4 +22,9 @@ function CloseTheDoor(id) {
 	audio.play();
 
 	$(id).css('display', 'block');
+	ShowDashboard();
+}
+
+function ShowDashboard() {
+	$('.instruments').css('display', 'block');
 }
