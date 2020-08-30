@@ -189,8 +189,26 @@ html, body {
 
 /* Instruments */
 .instruments {
-	display: none;
+	display: block;
 	margin-top: 400px;
+}
+
+.arrow {
+	margin-top: 410px;
+	transform: rotate(-118deg);
+}
+
+#arrow_kVoltmeter {
+	margin-left: 462px;
+}
+
+#arrow_armature {
+	margin-left: 662px;
+	transform: rotate(0);
+}
+
+#arrow_excitation {
+	margin-left: 862px;
 }
 
 #kVoltmeter {
