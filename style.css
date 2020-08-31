@@ -180,7 +180,7 @@ html, body {
 
 #contact_line {
 	margin-left: -510px;
-	margin-top: 76px;
+	margin-top: 78px;
 }
 
 .door {
@@ -189,11 +189,12 @@ html, body {
 
 /* Instruments */
 .instruments {
-	display: block;
+	display: none;
 	margin-top: 400px;
 }
 
 .arrow {
+	display: none;
 	margin-top: 410px;
 	transform: rotate(-118deg);
 }
@@ -221,4 +222,21 @@ html, body {
 
 #excitation {
 	margin-left: 850px;
+}
+
+/* Toggles */
+.toggles {
+	display: none;
+	margin-top: 650px;
+}
+
+#front_pantograph {
+	margin-left: 460px;
+}
+
+#back_pantograph {
+	margin-left: 660px;
+}
+#pantographs {
+	margin-left: 860px;
 }
