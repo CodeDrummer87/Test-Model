@@ -76,50 +76,9 @@ let src="images/locomotives/electric/pant/";
 
 function animPantUp() {
 	var animStop = false;
-	if(timer < 2) {
-		pant.attr("src", src + "pant_2.png");
-	}
-	else if(timer >= 2 && timer < 3) {
-		pant.attr("src", src + "pant_3.png");
-	}
-	else if(timer >= 3 && timer < 4) {
-		pant.attr("src", src + "pant_4.png");
-	}
-	else if(timer >= 4 && timer < 5) {
-		pant.attr("src", src + "pant_5.png");
-	}
-	else if(timer >= 5 && timer < 6) {
-		pant.attr("src", src + "pant_6.png");
-	}
-	else if(timer >= 6 && timer < 7) {
-		pant.attr("src", src + "pant_7.png");
-	}
-	else if(timer >= 7 && timer < 8) {
-		pant.attr("src", src + "pant_8.png");
-	}
-	else if(timer >= 8 && timer < 9) {
-		pant.attr("src", src + "pant_9.png");
-	}
-	else if(timer >= 9 && timer < 10) {
-		pant.attr("src", src + "pant_10.png");
-	}
-	else if(timer >= 10 && timer < 11) {
-		pant.attr("src", src + "pant_11.png");
-	}
-	else if(timer >= 11 && timer < 12) {
-		pant.attr("src", src + "pant_12.png");
-	}
-	else if(timer >= 12 && timer < 13) {
-		pant.attr("src", src + "pant_13.png");
-	}
-	else if(timer >= 13 && timer < 14) {
-		pant.attr("src", src + "pant_14.png");
-	}
-	else if(timer >= 14 && timer < 15) {
-		pant.attr("src", src + "pant_15.png");
-	}
-	else if(timer >= 15 && timer < 16) {
-		pant.attr("src", src + "pant_16.png");
+
+	if (timer >= 2 && timer < 16) {
+		pant.attr('src', src + 'pant_' + Math.ceil(timer) + '.png');
 	}
 	else if(timer >= 16 && timer < 17) {
 		pant.attr("src", src + "pant_15.png");
@@ -138,7 +97,6 @@ function animPantUp() {
 		timer += 0.2;
 		window.requestAnimationFrame(animPantUp);
 	}
-
 }
 
 function animPantDown() {
@@ -146,44 +104,8 @@ function animPantDown() {
 	if(timer >= 15 && timer < 17) {
 		pant.attr("src", src + "pant_14.png");
 	}
-	else if(timer >= 14 && timer < 15) {
-		pant.attr("src", src + "pant_13.png");
-	}
-	else if(timer >= 13 && timer < 14) {
-		pant.attr("src", src + "pant_12.png");
-	}
-	else if(timer >= 12 && timer < 13) {
-		pant.attr("src", src + "pant_11.png");
-	}
-	else if(timer >= 11 && timer < 12) {
-		pant.attr("src", src + "pant_10.png");
-	}
-	else if(timer >= 10 && timer < 11) {
-		pant.attr("src", src + "pant_9.png");
-	}
-	else if(timer >= 9 && timer < 10) {
-		pant.attr("src", src + "pant_8.png");
-	}
-	else if(timer >= 8 && timer < 9) {
-		pant.attr("src", src + "pant_7.png");
-	}
-	else if(timer >= 7 && timer < 8) {
-		pant.attr("src", src + "pant_6.png");
-	}
-	else if(timer >= 6 && timer < 7) {
-		pant.attr("src", src + "pant_5.png");
-	}
-	else if(timer >= 5 && timer < 6) {
-		pant.attr("src", src + "pant_4.png");
-	}
-	else if(timer >= 4 && timer < 5) {
-		pant.attr("src", src + "pant_3.png");
-	}
-	else if(timer >= 3 && timer < 4) {
-		pant.attr("src", src + "pant_2.png");
-	}
-	else if(timer >= 2 && timer < 3) {
-		pant.attr("src", src + "pant_1.png");
+	else if (timer >= 2 && timer < 14) {
+		pant.attr("src", src + 'pant_' + (Math.ceil(timer) - 2) + '.png');
 	}
 	else if(timer >= 1 && timer < 2) {
 		pant.attr("src", src + "pant_1.png");
@@ -192,7 +114,7 @@ function animPantDown() {
 		pant.attr("src", src + "pant_2.png");
 		animStop = true;
 	}
-	if(animStop !=true) {
+	if(!animStop) {
 		timer -= 0.2;
 		window.requestAnimationFrame(animPantDown);
 	}
