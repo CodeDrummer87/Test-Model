@@ -188,55 +188,59 @@ html, body {
 }
 
 /* Instruments */
-.instruments {
+.dashboard {
 	display: none;
 	margin-top: 400px;
+	margin-left: 400px;
+}
+
+.instruments {
+	margin-top: 0px;
 }
 
 .arrow {
-	display: none;
-	margin-top: 410px;
+	margin-top: 10px;
 	transform: rotate(-118deg);
 }
 
 #arrow_kVoltmeter {
-	margin-left: 462px;
+	margin-left: 62px;
 }
 
 #arrow_armature {
-	margin-left: 662px;
+	margin-left: 262px;
 	transform: rotate(0);
 }
 
 #arrow_excitation {
-	margin-left: 862px;
+	margin-left: 462px;
 }
 
 #kVoltmeter {
-	margin-left: 450px;
+	margin-left: 50px;
 }
 
 #armature {
-	margin-left: 650px;
+	margin-left: 250px;
 }
 
 #excitation {
-	margin-left: 850px;
+	margin-left: 450px;
 }
 
 /* Toggles */
 .toggles {
-	display: none;
-	margin-top: 650px;
+	margin-top: 250px;
 }
 
 #front_pantograph {
-	margin-left: 460px;
+	margin-left: 60px;
 }
 
 #back_pantograph {
-	margin-left: 660px;
+	margin-left: 260px;
 }
+
 #pantographs {
-	margin-left: 860px;
+	margin-left: 460px;
 }

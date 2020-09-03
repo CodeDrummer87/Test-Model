@@ -1,5 +1,7 @@
 let music = new Audio('music/main_theme.mp3');
 let pant;
+let arrowPos = -118;
+let underLoad = false;
 
 $(document).ready(function() {
 	$('.VL10').on('click', '#door_2', function() {
@@ -8,15 +10,25 @@ $(document).ready(function() {
 		OpenTheDoor("#door_1");
 	});
 
-	$('.toggles').on('click', '#back_pantograph', function() {
+	$('.toggles').on('click', '#pantographs', function() {
+		$(this).css('background-color', 'lightgreen');
+		$('#back_pantograph').removeAttr('disabled');
+		$('#front_pantograph').removeAttr('disabled');
+	}).on('click', '#back_pantograph', function() {
 		pant = $('#pant_1');
 		if (!backPantUp) {
 			backPantUp = true;
+			if (!frontPantUp && !underLoad) {
+				underLoad = true;
+			}
 			$(this).css('background-color', 'lightgreen');
 			GetPantUp();
 		}
 		else {
 			backPantUp = false;
+			if (!frontPantUp && underLoad) {
+				underLoad = false;
+			}
 			$(this).css('background-color', '#fff');
 			GetPantDown();
 		}	
@@ -24,11 +36,17 @@ $(document).ready(function() {
 		pant = $('#pant_2');
 		if (!frontPantUp) {
 			frontPantUp = true;
+			if (!backPantUp && !underLoad) {
+				underLoad = true;
+			}
 			$(this).css('background-color', 'lightgreen');
 			GetPantUp();
 		}
 		else {
 			frontPantUp = false;
+			if (!backPantUp && underLoad) {
+				underLoad = false;
+			}
 			$(this).css('background-color', '#fff');
 			GetPantDown();
 		}
@@ -53,9 +71,7 @@ function CloseTheDoor(id) {
 }
 
 function ShowDashboard() {
-	$('.instruments').css('display', 'block');
-	$('.arrow').css('display', 'block');
-	$('.toggles').css('display', 'block');
+	$('.dashboard').css('display', 'block');
 }
 
 //.:: Pantographs
@@ -92,6 +108,9 @@ function animPantUp() {
 	else if(timer >= 19 && timer < 20) {
 		pant.attr("src", src + "pant_14.png");
 		animStop = true;
+		if (underLoad) {
+			window.requestAnimationFrame(ShowVoltageUp);
+		}
 	}
 	if(!animStop) {
 		timer += 0.2;
@@ -113,9 +132,28 @@ function animPantDown() {
 	else if(timer >= 0 && timer < 1) {
 		pant.attr("src", src + "pant_2.png");
 		animStop = true;
+		if (!underLoad) {
+			window.requestAnimationFrame(ShowVoltageDown);
+		}	
 	}
 	if(!animStop) {
 		timer -= 0.2;
 		window.requestAnimationFrame(animPantDown);
+	}
+}
+
+function ShowVoltageUp() {
+	$('#arrow_kVoltmeter').css('transform', 'rotate(' + arrowPos + 'deg)');
+	if (arrowPos < 77) {
+		arrowPos += 5;
+		window.requestAnimationFrame(ShowVoltageUp);
+	}
+}
+
+function ShowVoltageDown() {
+	$('#arrow_kVoltmeter').css('transform', 'rotate(' + arrowPos + 'deg)');
+	if (arrowPos > -118) {
+		arrowPos -= 5;
+		window.requestAnimationFrame(ShowVoltageDown);
 	}
 }
